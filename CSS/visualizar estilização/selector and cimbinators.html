@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../selector and combinators.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>titulo</h1>
+
+    <!--O selector padrão consegue achar o elemento mesmo que tenham outros no caminho-->
+    <article>
+        <h2>sub-titulo</h2>
+        <p title="paragrafo unico">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, harum iure! Quo atque sed cum, ea quas soluta. Totam culpa maxime beatae nemo excepturi voluptate. Voluptates sed sequi natus placeat.</p>
+        <div>
+            <h2>sub-titulo</h2><!--É capturado pelo selector padrão-->
+        </div>
+        <button>butão</button>
+    </article>
+
+    <!--Child combinator-->
+    <ul>
+        <li>item 1</li> <!--Pego pelo child combinator-->
+
+        <ul>
+            <li>item 2</li> <!--Não é pego pelo child combinator -->
+        </ul>
+    </ul>
+
+    <!--silibing combinator-->
+    <!--Os tres elementos abaixo estão na mesma hierarquia-->
+    <button>um butão</button>
+    <button>Outro butão</button> <!--irmão direto (primeiro irmão) irmão de h3-->
+    <button>mais um butão</button>
+    <!---->
+ 
+    <!--General silibing combinator-->
+    <h1>tit</h1>
+    <p>parag</p> <!--recebe estilo por ser um p irmão do h1-->
+    <p>parag</p><!--recebe estilo por ser um p irmão do h1-->
+
+    <!--Misturando tudo-->
+    <ul>
+        <li>aleatorio</li>
+        <li class="red"></li>
+    </ul>
+</body>
+</html>

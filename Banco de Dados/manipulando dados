@@ -1,0 +1,8 @@
+//Manipulando dados
+SELECT * FROM aluno
+
+INSERT INTO aluno (nome, cpf, responsavel) VALUES ('angel gomes',12345678913,'rangel gomes')
+
+UPDATE aluno SET responsavel='angela gomes' WHERE matricula = 4
+
+DELETE FROM aluno WHERE matricula = 4

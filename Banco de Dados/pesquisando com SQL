@@ -1,0 +1,68 @@
+SELECT * FROM aluno
+
+SELECT * FROM professor
+
+SELECT * FROM aulas
+
+/*Podemos usar a pesquisa das seguintes formas*/
+SELECT * FROM aluno WHERE matricula = 1
+
+SELECT * FROM aluno WHERE nome like 'j%' /*% -> representa qualquer coisa*/
+
+SELECT * FROM aluno WHERE nome like '%G%' /* O like é usado para campos de texto*/
+
+SELECT matricula, cpf FROM aluno WHERE nome like '%G%'
+
+SELECT nome, matricula FROM aluno WHERE cpf = 45678945645 /* O igual só serve para campos do tipo number*/
+
+SELECT * FROM aluno WHERE matricula >= 2 /*Aceita varios operadores relacionais como >, <, >= */
+
+SELECT * FROM aluno WHERE matricula <> 2 /*Não igual*/
+
+SELECT * FROM aluno WHERE matricula != 3 /*Diferente de três*/
+
+/*Operadores matemáticos*/
+SELECT * FROM aluno WHERE matricula = 1+1 /*Busca a matricula que é igual ao resultado*/
+
+SELECT * FROM aluno WHERE matricula = 3-2
+
+SELECT * FROM aluno WHERE matricula = 3*1
+
+SELECT * FROM aluno WHERE matricula = 1/1
+
+SELECT * FROM aluno WHERE matricula = 3%2
+
+/*lembrando que o resultado do valor não existir na tabela teremos erro de query*/
+SELECT * FROM departamentos
+
+SELECT * FROM funcionarios
+
+/*Operadores logicos*/
+SELECT * FROM funcionarios WHERE nome LIKE 'j%' AND id_funcionario < 3 /*junta mais de uma condição*/
+
+SELECT * FROM funcionarios WHERE id_funcionario > 5 OR nome LIKE 'j%'
+
+SELECT * FROM funcionarios WHERE id_funcionario BETWEEN 4 AND 7 /*entre um numero e outro*/
+
+SELECT * FROM funcionarios WHERE id_departamento IN(1, 2, 5) /*Pega casos especificos, no caso departamento especificos*/
+
+SELECT * FROM funcionarios WHERE id_departamento IS NULL /*Pega o campo especificado que é nulo*/
+
+/* Lembrando que em todos podemos colocar o NOT para ter um efeito contrario do normal, exemplo:*/
+SELECT * FROM funcionarios WHERE id_funcionario NOT BETWEEN 4 AND 7 /*ao contrario do anterior*/
+
+/*Prioriza a tabela da esquerda, ou seja, o que vem depois do from. Faz com que valores null apareçam também, todo conteudo da tabela a esquerda aparece mesmo sem um relacionamento*/
+SELECT * FROM funcionarios LEFT OUTER JOIN departamentos ON funcionarios.id_departamento = departamentos.id_dept
+
+SELECT * FROM funcionarios
+ORDER BY name /*temos desc para decrecente e asc para acendente*/
+
+SELECT * FROM funcionarios LIMIT 2 /*Tras so a quantidade especificada de resultados desde o primeiro,
+é como dizer me traga os 2 primeiro resultados que você encontrar*/
+
+SELECT * FROM funcionarios LIMIT 4 OFFSET 2 /* OFFSET ignora os dois primeiros resultados,
+e o LIMIT nos traz os 4 proximos resultados*/
+
+SELECT count(nome) FROM funcionarios
+
+SELECT id_departamento, count(id_departamento) FROM funcionarios GROUP BY id_departamento

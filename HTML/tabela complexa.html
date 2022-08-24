@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <caption>
+        Produzidos x Vendidos por Loja
+        </caption>
+
+        <!--cada <col> se refere a uma coluna e permite organizar melhor para os motores de buscas e para melhor acessebilidade, alem de ficar mais organizado-->
+    <colgroup>
+        <col>
+        <col span="2" style="background-color: green;"> <!--O spam permite cobrir mais de uma coluna-->
+        <col span="2" style="background-color: blue;">
+    </colgroup>
+
+    <thead>
+        <tr>
+            <!--rowspan permite cobrir mais de uma linha-->
+            <th rowspan="2"></th> <!--pula uma colona que ocupa dois espaços para a tabela ficar mais bonita-->
+            <th colspan="2" scope="colgroup">Afonso pena</th> <!--O scope torna a acessebilidade mais eficiente melhorando nos motores de buscas-->
+            <th colspan="2" scope="colgroup">Antônia Pereira</th>
+        </tr>
+
+        <tr>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+            <th scope="col">Produzidos</th>
+            <th scope="col">Vendidos</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <th scope="row">Vassouras</th>
+            <td>50</td>
+            <td>30</td>
+            <td>20</td>
+            <td>5</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Baldes</th>
+            <td>10</td>
+            <td>50</td>
+            <td>20</td>
+            <td>15</td>
+        </tr>
+    </tbody>
+    
+    </table>
+</body>
+</html>

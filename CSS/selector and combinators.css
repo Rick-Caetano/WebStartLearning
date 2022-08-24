@@ -1,0 +1,69 @@
+
+/*
+    ## Selectores
+
+    * Element selector
+        - pode pegar qualquer elemento do HTML
+    * ID Selector
+        - é ideal que o id seja unico
+    * class Selector
+        - elementos podem ter uma ou mais classes
+    * Pseudo-class selector
+        - elementos em um estado específico
+    
+    ## Combinators
+
+    * Combinator padrão
+        - vai procurar dentros das tags especificadas o elemento que vai ao fim para aplicar a estilização
+    * Child combinator
+        - Identificado pelo sinal '>' entre dois seletores
+        - seleciona somente o elemente que é filho direto do pai, elementos depois do filho serão desconsiderados
+    * Adjacent sibling combinator
+        - identificado pelo sinal '+' entre dois elementos
+        - Seleciona somente o elemento do lado direito que é irmão que na hierarquia
+    * General sibling combinator
+        - Identificado pelo sinal ' ~ ' entre dois seletores
+        - seleciona todos os elementos irmãos
+
+    ## Dica
+
+    * Seletores muito específicos tendem a causar dificuldades no reuso das reggras de estilização dos elementos
+    * muitas vezes, um simples uso de classes, torna o trabalho muito mais eficiente
+*/
+
+/* atribute selector*/
+[title] {
+    color:red;
+}
+
+/* pseudo-class selector*/
+button:houver{
+    background-color: blue;
+}
+
+/* Combinator*/
+
+body article h2 {
+    color: green;
+}
+
+/*child combinator*/
+body > ul > li {
+    color: yellow;
+}
+
+/*sibling combinator*/
+/*ADJACENT*/
+button + button {
+    margin-left: 50px;
+}
+
+/*GENERAL*/
+h1 ~ p {
+    color: purple;
+}
+
+/*Combinando tudo*/
+ul > li[class="red"] { /*muito especifico*/
+    color: aqua;
+}

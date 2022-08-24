@@ -1,0 +1,20 @@
+/*
+
+Basicamente se trata de resumir muitas propriedades em umas só linha de codigo simplificada
+
+* Não irá considerar propriedades anteriores 
+* Valores não especificados irão assumir o valor padrão
+* geralmente, a ordem descrita não importa, mas, se houver muitas propriedades com valores semelhantes podemos encontrar problemas
+
+*/
+
+h1 {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: .8em;
+    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /*font shorthand (desconsidera os valores anteriores*/
+    font: bold italic .8em/1.2 Arial, Helvetica, sans-serif;
+}

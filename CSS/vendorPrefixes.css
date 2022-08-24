@@ -1,0 +1,22 @@
+/*
+    ## Vendor Prefixes
+
+    Permite que browsers adicione `features` a fim de colocar em uso alguma novidade que vemos no CSS
+
+    # Exemplo 
+
+*/
+
+p {
+    -webkit-background-clip: text; /* Chrome, Safari, IOS e Android */
+    -moz-background-clip: text; /* Mozilla (firefox) */
+    -ms-background-clip: text; /* Internet Explorer*/
+    -moz-background-clip: text; /*Opera */
+}
+
+/*
+# Consultas
+
+https://ireade.github.io/which-vendor-prefix/
+https://caniuse.com
+*/

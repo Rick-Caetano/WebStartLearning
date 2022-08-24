@@ -1,0 +1,65 @@
+/* 
+
+    ##font-variant
+    
+    * variações na apresentação da fonte
+
+    ##font-stretch
+
+    * Alargamento ou encolhimento da fonte
+    * aceita palavras como: expanded, condensed e normal
+    * aceita porcentagem 50% a 200%
+    * nem todas as fontes aceitam
+
+    ##letter-spacing
+
+    * faz espaçamento entre as letras
+    
+    ##word-spacing
+
+    * espaçamento entre as palavras
+
+    ## line-height
+
+    * Espaços entre linhas, comum 1.5 ou 2
+
+    ## text-transform
+
+    * Aceita: Uppercase, Capitalize, lowercase, none
+
+    ## text-decoration
+
+    * Aceita underline, line-through, wavy, dashed e etc. 
+
+    ## text-shadow
+
+    * Coloca sombra
+*/
+
+.pragf-1 {
+    font-variant: small-caps;
+}
+
+.pragf-2{
+    letter-spacing: 4px;
+}
+
+.pragf-3 {
+    word-spacing: 8px;
+}
+
+.pragf-4{
+    line-height: 2;
+    text-transform: capitalize;
+}
+
+.pragf-5{
+    text-decoration: line-through;
+}
+
+h2{
+    text-align: right;
+    text-shadow: 1px 1px 8px red,
+    2px 2px 1px green;
+    text-transform: uppercase;
+}

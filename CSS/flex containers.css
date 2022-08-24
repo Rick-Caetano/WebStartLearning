@@ -1,0 +1,220 @@
+/*
+
+Propriedades do flex container
+ ## flex-direction
+    * Diz a respeito da direção dos itens
+    * flex é uma dimensão (horizontal ou vertical)
+    * Podemos mudar a direção com 'flex-direction'
+    * valores: (row| row-reverser| column| column-reverse)
+
+ ## flex-wrap
+    * Podemos usar multi linhas
+    * cada nova linha, um novo flex container, ou seja, uma nova linha principal é criada 
+    * se uma div por exemplo não tiver o espaço necessario para comportar o conteudo dentro, novas linhas são criadas
+    * Aceita por exemplo wrap-reverse para colocar os ultimos elementos acima
+
+ ## flex-flow
+
+    * é um shorthandd
+    * É juntado nele o flex-direction e o flex-wrap
+
+ ## justify-content
+
+    * Alinhamento dos elementos dentro do container
+    * distribuicão dos elementos
+    * Valores:
+        - flex-start
+        - flex-end
+        - center
+        - space-around
+        - space-between
+        - space-evenly
+
+ ## aling-items
+    
+    * Alinhamento dos elementos no eixo cruzado
+    * Por padrão vem com stretch, ou seja, os elementos ficam esticados
+    * Valores
+        - stretch
+        - flex-start
+        - flex-end
+        - center
+
+ ## gap
+
+    * Espaços entre os elementos
+
+ ## valores
+    
+    * Unidades de medidas
+        - fixas: px, pt
+        - flexiveis: %, em, rem
+
+Propriedade dos itens
+
+ ## flex-basis
+    
+    * Por padrão vem como auto e deixar os elementos serem ajustaveis ate certo ponto, mas quando limitado ele torna todos os itens com um tamanho maximo. Dependendo do flex-direction, pode ter comportamentos diferentes nos eixos
+
+ ## flex-grow
+
+    * faz com que a area que esteja sobrando seja ocupada, considerando a repartição igual em caso de uso em mais de um elemento.
+    * Usa a ideia de fração
+        - 0 é nada
+        - 1 é uma fração,
+        - 2 são duas frações, ou seja, pega um espaço maior e assim vai...
+
+ ## flex-shrink
+
+    * Encolhe itens dentro do container
+    * depende do tamanho dos outros elementos do container, o uso do flex-basis faz diferennça
+    * numeros menores que 1 tem preferencia, e deixa os elementos maiores
+    * valor 1 é padrão
+
+ ## flex
+
+    * shorthand
+    * junta o flex-grow, flex-shrink e flex-basis
+    * podem ter 1, 2 ou 3 valores
+*/
+
+.flex-direction {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 25vh;
+}
+
+.flex-direction div{
+    font-size: 25px;
+}
+
+.flex-wrap{
+    display: flex;
+    border: 1px dashed red;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+}
+
+.flex-wrap div, .flex-flow div{
+    border: 2px solid;
+    padding: 5px;
+    width: 300px;
+}
+
+.flex-flow {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    border: 2px solid yellow;
+    margin-bottom: 20px;
+}
+
+
+.justify-content{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 1px dashed orange;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.justify-content div, .aling-items div, .gap div {
+    border: 1px solid black;
+}
+
+.aling-items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px dashed red;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.gap{
+    display: flex;
+    border: 1px solid brown;
+    gap: 4%;
+    margin-bottom: 20px;
+}
+
+.flex-basis {
+    display: flex;
+    /*flex-direction: column; -> se mudar a direção para coluna, o flex-basis não significa mais a largurar e sim a altura*/
+    border: 1px solid green;
+    margin-bottom: 20px;
+}
+
+.flex-basis div {
+    border: 1px solid;
+    flex-basis: auto;
+
+}
+
+.flex-basis div:nth-child(1){
+    width: 600px;
+    /*height: 300px; -> caso flex-basis tivesse o flex-direction como coluna*/
+}
+
+.flex-grow {
+    display: flex;
+    border: 1px solid grey;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.flex-grow div {
+    border: 1px solid;
+    width: 50px;
+}
+
+.flex-grow div:nth-child(2),
+.flex-grow div:nth-child(3){
+    flex-grow: 1;
+}
+
+.flex-shrink{
+    display: flex;
+    border: 1px dashed red;
+    height: 180px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.flex-shrink div{
+    flex-basis: 120px;
+    border: 1px solid;
+}
+
+.flex-shrink div:nth-child(2),
+.flex-shrink div:nth-child(3){
+    flex-shrink: 2;
+}
+
+.flex, .order {
+    display: flex;
+    border: 2px dodgerblue dashed;
+}
+
+.flex div{
+    border: 1px solid;
+    /* flex-grow, flex-shrink e flex-basis */
+    flex: 0 1 45px;
+}
+
+.order div {
+    border: 1px solid salmon;
+}
+
+
+.order div:nth-child(2){
+    order: 1;
+}
+.order div:nth-child(1){
+    order: 3;
+}
+.order div:nth-child(4){
+    order: 4;
+}

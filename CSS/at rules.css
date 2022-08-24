@@ -1,0 +1,14 @@
+/*
+    * Está relacionado ao comportamento do CSS
+    * Começa com o sinal de `@` seguido do identificador e valor
+    
+    ## exemplo comuns
+
+- @import --> incluir um css externo
+
+- @media --> regras condicionais para dispositivos
+
+- @font-face --> fontes externas
+
+- @keyframes --> Animation
+*/

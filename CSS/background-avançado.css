@@ -1,0 +1,45 @@
+/*
+    ##background-origem
+
+Ajusta o preenchimento da imagem definida no background
+
+    ## background-clip
+
+Ajusta o preenchimendo do background color e do background image (se não for definido com o background origem) 
+
+Ambos aceitam os valores:
+
+    * content-box -> Ajusta no limite do conteudo
+    * padding-box -> ajusta no limite do padding-definido
+    * border-box -> ajusta no limite da borda
+    * Porcentagem, px, em e etc...
+*/
+
+*{margin: 0;}
+
+header{
+    height: 100px;
+    border: 7px dashed red;
+    padding: 10px;
+
+    background-color: rgb(23, 109, 69);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCIcZLeDcSyAonUfv4jrodDT84Uf6gXpcUb6TudjPM5uCA0Rc-falY20LWzA2S8aPb6g&usqp=CAU");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    background-clip: padding-box;
+
+}
+
+main {
+    margin-top: 10px;
+    height: 500px;
+
+/*Shorthand com multiplos backgrounds*/
+
+    /*A virgula (fora da função) indica o segundo  background, que é o da imagem*/
+    background: linear-gradient(rgba(112, 31, 31, 0), rgba(255, 0, 0, 0.2)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcqJ-BFHPKn9NLmLN-JF8BEkjWrCbLxoFn_g&usqp=CAU") no-repeat right top / 100px border-box content-box;
+
+
+}

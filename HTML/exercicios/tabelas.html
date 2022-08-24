@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabela daquele jeitão</title>
+</head>
+<body>
+
+<div>
+<table>
+    <caption contenteditable="true">tabela simples de pessoas</caption>
+
+    <colgroup>
+        <col id="col-1">
+        <col id="col-2">
+        <col id="col-3">
+    </colgroup>
+
+    <thead>
+    <tr>
+        <th>pessoas</th>
+        <th>peso</th>
+        <th>idade</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>laura</td>
+        <td>50.0</td>
+        <td>19</td>
+    </tr>
+    
+    <tr>
+        <td>mauríci</td>
+        <td>65.0</td>
+        <td>23</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+<div id="container">
+<table>
+    <caption>tabela cabulosa de uma empresa</caption>
+
+    <colgroup>
+    <col id="col-1">
+    <col span="2" id="col-2">
+    <col span="2" id="col-3">
+    </colgroup>
+    <thead>
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="2" scope="colgroup">Empresa A</th>
+            <th colspan="2" scope="colgroup">Empresa B</th>
+        </tr>
+
+        <tr>
+            <th scope="col">Lucro</th>
+            <th scope="col">Prejuizo</th>
+            <th scope="col">lucro</th>
+            <th scope="col">Prejuizo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <th scope="row">Setembro (em R$)</th>
+            <td>1000,00</td>
+            <td>8000,00</td>
+            <td>10600,00</td>
+            <td>600,00</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Outubro (em R$)</th>
+            <td>7000,00</td>
+            <td>2000,00</td>
+            <td>1600,00</td>
+            <td>100,00</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+</body>
+
+<style>
+    #container{
+        position: absolute;
+        margin-left: 35%;
+        margin-top: -105px;
+    }
+    #col-1, caption, table{
+        background-color: grey;
+    }
+    #col-2{
+        background-color: rgb(29, 29, 182);
+    }
+    #col-3{
+        background-color: rgb(3, 128, 3);
+    }
+    
+</style>
+</html>

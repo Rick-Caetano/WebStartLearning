@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+        SVG
+
+        É uma marcação estilo html, mas não é para textos, e sim para fazer imagens. Possuindo elementos para gerar forma
+
+        ## Imagem rasterizada x imagem vetorizada
+
+        Imagem rasterizada
+
+        fotos normais que pegamos na internet (png, jpg, gif e etc)
+            * pixelizada
+
+        Imagem vetorizada
+
+        Feita via algoritmos e renderizada de forma diferente (SVG)
+
+        Vantagens
+             
+            * Mais leve
+            * Mais detalhada
+            * Maior acessibilidade e SEO
+            * Pode ser editada via CSS ou atributos
+            * Pode ser usada em um arquivo separado
+            * Pode ser criado por você com texto
+
+        Desvantagens
+
+            * Pode ser mais complicado de trabalhar
+            * Quanto mais complexa a imagem, mais trabalho para o navegador
+            * Navegadores mais antigos não possuem suporte a essa tag
+            * se colocado diretamente no HTML, apos muito o uso, o navegador pode parar de guardar em cache 
+
+        Para fotograficas ainda prefira usar imagens rasterizadas
+    -->
+
+    <!--SVG tag-->
+        <svg width="200" heiht="300">
+            <circle cx="100" cy="100" r="80" stroke="red" stroke-width="6">
+        </svg>
+
+    <!--SVG no arquivo-->
+        <img src="circle.svg" alt="">
+    
+    <figure>
+        <a href="https://google.om">
+            <img src="https://source.unsplash.com/random" alt="titulo da imagem" title="eu sou uma imagem aleatoria" height="250px">
+        </a>
+
+        <figcaption>Imagem randomica</figcaption>
+    </figure>
+</body>
+</html>

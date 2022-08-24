@@ -1,0 +1,38 @@
+body{
+    height: 100vh;
+    margin: 0;
+}
+
+main{
+    position: relative;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 8px;
+}
+
+.box1{
+    background-color: red;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.box2{
+    background-color: blue;
+    z-index:3; /*Faz o empilhamento, sendo o de maior numero o que ficara na camada superiorr*/
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.box3{
+    background-color: yellow;
+    z-index: 2;
+    position: absolute;
+    left: 25px;
+    top: 25px;
+}
+

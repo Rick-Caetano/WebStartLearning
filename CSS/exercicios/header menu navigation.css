@@ -1,0 +1,63 @@
+* {
+    margin: 0px;
+}
+
+
+
+/*Outra solução*/
+header{
+    padding: 4rem;
+    background-color: lightgray;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: .8rem;
+    align-items: center;
+}
+
+ul li:last-child{
+    background-color: black;
+    color: white;
+    padding: .8rem;
+}
+
+
+/*Minha solução*/
+
+box{
+    display: flex;
+    
+}
+
+.container{
+    display: flex;
+    flex-grow: 2;
+    justify-content: flex-end;
+    height: 30px;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 30px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.container a:last-child{
+    background-color: blueviolet;
+    color: white;
+    padding: .8rem;
+    border-radius: 5px;
+    margin-right:30px ;
+
+}
+

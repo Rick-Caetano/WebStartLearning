@@ -1,0 +1,15 @@
+/*
+# Porcentagens 
+
+ * Em muitos casos é tratado da mesma maneira que as  distâncias <length> 
+ * sempre será relativo a algum valor
+
+*/
+
+:root{
+    font-size: 18px;
+}
+
+li{
+    font-size: 80%;
+}

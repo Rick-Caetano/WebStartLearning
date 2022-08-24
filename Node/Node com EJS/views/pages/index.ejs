@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!--Veja que divimos os pedeços do codigo em varios arquivos, isso permite a reutilização de forma facil do codigo-->
+    <%- include('../parts/head'); %> <!--tag exclusiva do ejs que permite incluir outros arquivos... o <%- %> indica essa tag. Deve ser colocada nos lugares certos-->
+    
+<body class="container">
+    <%- include('../parts/header'); %>
+    <main>
+        <div class="jumbotron">
+            <h1 class="">Node com EJS</h1>
+            <p>Aprendendo a trabalhar com arquivos EJS</p>
+            <p><%= subtitle %></p><!--Pegamos o objeto subtitle passado no arquivo server.js e pedimos para mostrar seu conteudo aqui, perceba o sinal de igual na sintaxe-->
+        </div>
+        <ul>
+            <!--Usaremos um forEach para puxa os itens do objeto qualitys criado no "server.js" e coloca-lo no nosso EJS, veja a sintaxe abaixo-->
+            <% qualitys.forEach(function (quality){ %> <!--A tag ainda não foi fechada...--> 
+            <li>
+                <strong> <%= quality.title %> </strong> <%= quality.message %> <!--Aqui puxamos o title e a message dos items, um por um-->
+            </li>
+            <% }) %><!--Apenas aqui fechamos a tag-->
+        </ul>
+    </main>
+
+    <%- include('../parts/footer'); %>
+</body>
+</html>

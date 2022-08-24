@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        .weather{
+            padding: 6px;
+            background-color: blueviolet;
+            font-family: 'JetBrains Mono', monospace;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+      <label for="if">My Universe</label><input id="if" type="radio" name="conditions" value="if" checked>
+      <label for="case">Outher Universe</label><input id="case" type="radio" name="conditions" value="case">
+    </div>
+
+    <label for="weather">Como está o clima hoje</label>
+    <select name="weather" id="ifSelect" class="weather">
+        <option value="">--Make your choice--</option>
+        <option value="sunny">sunny</option>
+        <option value="rainy">rainy</option>
+        <option value="snowing">snowing</option>
+        <option value="overcast">overcast</option>
+    </select>
+
+    <p></p>
+
+    <script src="condicionais em options.js"></script>
+</body>
+</html>

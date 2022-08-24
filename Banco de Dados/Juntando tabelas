@@ -1,0 +1,32 @@
+/* O "ON" diz pra gente que a chave de um deve ser igual a de outra. 
+Perceba que são duas chaves ligadas para que ocorra a junção e sincronia*/
+
+SELECT * FROM funcionarios JOIN departamentos ON departamentos.id_dept = funcionarios.id_departamento
+
+SELECT * FROM funcionarios JOIN departamentos
+ON departamentos.id_dept = funcionarios.id_departamento WHERE funcionarios.id_departamento=2 /* ou WHERE departamentos.id_dept = 2 */
+
+/* O as é o aliases, ou seja, abreviações (mais como um apelido)*/
+SELECT func.nome as 'NOME', func.cpf as 'CPF', dept.descricao as 'DEPARTAMENTO' /* Nesse caso o as troca o nome das colunas*/
+FROM funcionarios as func /*Aqui ele encurta o nome da tabela*/
+JOIN departamentos as dept /* Encurta o nome da outra tabela*/
+ON func.id_departamento = dept.id_dept
+
+/*Prioriza a tabela da esquerda, ou seja, o que vem depois do from. Faz com que valores null apareçam também, todo conteudo da tabela a esquerda aparece mesmo sem um relacionamento*/
+SELECT * FROM funcionarios LEFT OUTER JOIN departamentos ON funcionarios.id_departamento = departamentos.id_dept
+
+SELECT id_departamento, count(id_departamento) FROM funcionarios GROUP BY id_departamento
+
+/* Melhorando o comando anterior */
+SELECT departamentos.descricao, count(funcionarios.id_departamento)
+FROM funcionarios
+JOIN departamentos
+ON funcionarios.id_departamento = departamentos.id_dept
+GROUP BY funcionarios.id_departamento
+
+SELECT departamentos.descrição, count(funcionarios.id_departamento)
+FROM funcionarios
+JOIN departamento
+ON funcionarios.id_departamento = departamento.id_dept
+GROUP BY funcionarios.id_departamento
+HAVING count(funcionarios.id_departamento) >= 2 /* O having é usado para group pois o where não pode ser usado. Os grupos que serão mostrados só serão aqueles com 2 ou mais */

@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    list-style: none;
+}
+
+.image{
+    width: 150px;
+    height: 150px;
+}
+
+img {
+    width: 30%;
+    height: auto;
+}
+
+gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    justify-content: center;
+}

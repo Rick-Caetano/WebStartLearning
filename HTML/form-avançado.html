@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        Atributos do input
+
+        * Autocomplete -> O navegador vai autocompletar com dados salvos no browser do cliente, como email, nome, CEP e etc 
+        * autofocus -> Vai direcionar o foco para aquele elemento
+        * disabled -> desabilita elemento, pode ser anexado com javascript para ampliar funcionalidaes
+        * form -> coloca-se o id do form para poder usar o input em qualquer lugar do documento html
+        * name -> deve ser usado obrigatoriamente para boa atuação junto a os banco de dados
+        * readonly
+        * value
+
+        Atributos do password
+
+        minlength/maxlength
+            * minimo ou maximo de caracteres para o campo
+        Size
+            * O número aceitável de caracteres que o campo deverá conter
+        Pattern
+            * Cria regras e padrões para senha
+            exemplo: caracteres hexadecimais com o limite de no minimo 4 e no maximo 8 caracteres
+            ex: pattern {0-9a-fA-F}{4,8}
+        Inputmode
+            * Altera o teclado em smartphones para apenas númericos por exemplo
+            ex: inputmode="numeric"
+        autocomplete
+            * on: permite a sugestão de: new-password ou current-password
+            * off: desabilita a opçaõ de autocompletar 
+            * new-password: o navegador podera sugerir uma nova senha
+
+          atributos do email
+            
+        multiple
+            * permite mais de um email emails separado por virgulas
+        Pattern
+            exemplo: colocar um certo tipo de dominio que vai ser aceito
+        list
+            * pode ter uma lista de pre-valores de emails (tem que usar o datalist)
+        autocomplete
+        size
+        maxlength/minlength
+
+        CHECKBOX
+
+            * Caso a caixa não for selecionada, no backend o valor será vazio
+
+        ATRIBUTOS DO URL
+
+        spellcheck
+            * Habilita ou desabilita verificação ortografica para o input com valores boleanos
+        size
+        maxlength/minlength
+        Pattern
+
+        ATRIBUTOS RADIO
+
+        checked
+        value
+
+        ATRIBUTOS TEXTAREA
+
+        rows e cols
+            * aumenta o número de linhas ou colunas
+        maxlength e minlength
+        wrap
+            * Habilita ou desabilita quebra de linha com hard ou soft
+        outros comuns ao input...
+
+        ATRIBUTOS SELECT
+
+        multiple
+        size
+            * limita as opções visiveis
+
+        ATRIBUTO SEARCH
+
+        list
+        pattern
+        aria-label
+            * Coloca o label dentro da tag input
+
+        ATRIBUTOS NUMBER
+
+        min/max
+        step
+            * pula os numero de acordo com o intervalo escolhidos
+
+        ATRIBUTOS RANGE
+
+        min/max
+        step
+
+        ATRIBUTOS FILE
+
+        temos ainda Input
+        date
+        datetime-local
+        mouth
+        week
+        no entanto todos esses não tem suporte em todos os browsers por isso devemos ficar de olho no : https://caniuse.com
+
+        value
+            * contém o arquivo a ser enviado
+        accept
+            * descreve que tipos de arquivos serão aceitos. ex: .doc, .pdf, audio/*, image/png, image/*
+        files
+            * a lista de arquivo ou arquivos
+        multiple
+            * mais de um arquivo
+        
+        OBS: o formulario para esse input deve ser diferente, sendo o method="post" e o enctype="multipart/form-data"
+    -->
+</head>
+<body>
+
+    <form action="" method="post">
+        <label for="senha">senha</label>
+        <input id="senha" type="password"
+        minlength="8"
+        maxlength="16"
+        size="16"
+        inputmode="numeric"
+        placeholder="Sua senha"
+        aria-autocomplete="new-password"
+        title="Coloque no mínimo 8 caracteres sendo apenas números"
+        >
+
+        <label for="email">email</label>
+        <input type="email"
+        name="" 
+        id="email"
+        pattern=".+@rocketseat\.com\.br"
+        required >
+        
+        <label for="url">url</label>
+        <input type="url" 
+        name="" 
+        id="url"
+        required
+        placeholder="http://algumacoisa.com.br"
+        pattern=".*\.com\.br.*"
+        title="somente dominios .com.br serão aceitos"
+        spellcheck="false" 
+        >
+
+        <fieldset>
+            <legend>escolha seus interesses</legend>
+        <input type="checkbox" name="interest" id="codar" value="codar">
+        <label for="codar">codar</label>
+        <input type="checkbox" name="interest" id="musica" value="musicas">
+        <label for="musica">musica</label>
+        </fieldset>
+
+        <textarea 
+        name="" 
+        id="" 
+        cols="40" 
+        rows="20"
+        wrap="soft"
+        placeholder="seu textinho"
+        ></textarea>
+<br>
+        <input type="search" 
+        name="search" 
+        id="id"
+        size="20"
+        pattern="[0-9]{2}"
+        title="numero do id: ex 99"
+        aria-label="digite o id para pesquisa"
+        placeholder="pesquisa id">
+<br>
+
+        <input type="number" 
+        name="" 
+        id=""
+        step="50"
+        min="0"
+        max="1000"
+        placeholder="num">
+
+        <input type="range" 
+        name="" 
+        id=""
+        min="-10"
+        max="10"
+        step="0.1">
+    </form>
+
+    <!--O tratamento de dados para essa estrutura é diferente-->
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file" 
+        name="" 
+        id=""
+        accept="image/*"
+        multiple
+        >
+        <input type="submit" value="enviar">
+    </form>
+</body>
+</html>

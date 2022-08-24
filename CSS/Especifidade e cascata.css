@@ -1,0 +1,30 @@
+/*
+Cascata
+
+* O estilo é lido de cima para baixo, no entanto leva-se em consideração 3 fatores:
+
+1. Origem do estilo
+    Ordem de preferêcia: Inline> tag style > tag link
+
+    Inline --> quando colocamos dentro de uma tag HTML o CSS
+    tag style --> quando usamos a tag style no HTML
+    Tag Link --> quando usamos a tag link para referenciar um arquivo CSS
+
+2. Especifidade
+    É um cálculo matemático, onde, cada tipo de seletor e origem do estilo, possuem valores a serem considerados. Esses valores definem a prioridade no CSS, assim como a origem (pode sobrepor a regra da origem_
+
+    0. Seletor Universal (*), combinators e negation pseudo-class (:not())
+    1. Tipo de elemento e pseudo-elements (::before, ::after)
+    10. Classes e attribute selectors ([type="radio"])
+    100. ID selector
+    1000. inline
+
+3. Importancia ### Regra !important
+
+ O elemento que receber essa regra terá total prioridade e o estilo sobrescreverá qualquer outro, são raros os casos de uso, como precisar de alterar uma biblioteca de alguem e não estiver conseguindo fazer isso normalmente
+
+    *cuidado, evite o uso (principalmente nos projetos criado por você)
+    * não é considerado uma boa prática
+    * quebra o fluxo natural da cascata
+
+*/

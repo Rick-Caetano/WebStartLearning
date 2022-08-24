@@ -1,0 +1,52 @@
+/*
+
+    ##Grid
+
+    * posicionamento dos elementos dentro da caixa
+    * posicionamento horizontal e vertical ao mesmo tempo
+    * cria espaços para os elementos filhos habitarem
+*/
+
+/*É aplicado o grid ao body pois ele que vai trabalhar com o posicionamento dos filos desse caso*/
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: grid;
+
+    /*Cada aspas representa uma linha, deve-se repetir nomes ou colocar diferente dependendo da quantidade de colunas (nesse caso temos só duas)*/
+    grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+
+    /*Define o tamanho da linhas do grid. O 1fr se refere a uma fração, deixa a linha flexivel, diferente do px*/
+    grid-template-rows: 30px 1fr 40px;
+
+    /*Define o tamanho das colunas. Como só temos 2 colunas */
+    grid-template-columns: 1fr 150px;
+}
+
+header{
+    grid-area: header;
+    background-color: yellow;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main{
+    grid-area: main;
+    background-color: red;
+}
+
+aside{
+    grid-area: aside;
+    background-color: orange;
+}
+
+footer{
+    grid-area: footer;
+    background-color: gray;
+}

@@ -1,0 +1,31 @@
+/*
+
+Border:
+
+- Modifica o tamanho da caixa, então se tiver 100px de width e a borda for de 2px, então o width total será de 104px (2px*2 + 100px)
+- apenas retangular
+- Pode ser ajustada por partes, ou seja ajustes individuais
+
+Outline:
+
+- Não modifica o tamanho da caixa, pois não é parte  do box model
+- Poderá ser diferente de retangular
+- Não permite ajustes individuais
+- Mais usado pelo user agende para acessibilidade
+
+É parecido com a bordar, mas fica na parte mais exterior da box
+*/
+
+#box-1{
+    width: 150px;
+    height: 200px;
+    margin: 20% auto;
+
+    border: 3px outset red;
+    border-bottom: 8px yellow solid ;
+    border-top:  8px yellow solid;
+
+    outline: green 10px solid;
+
+    box-sizing: border-box; 
+}

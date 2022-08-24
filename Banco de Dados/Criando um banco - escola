@@ -1,0 +1,28 @@
+/* Primeiro crie um arquivo .sqlite e abre o beekeeper studio*/
+
+CREATE TABLE aluno ( /*cria a tabela*/
+    matricula INTEGER PRIMARY KEY AUTOINCREMENT, 
+    nome TEXT,
+    cpf INTEGER UNIQUE,
+    responsavel TEXT
+)
+
+CREATE TABLE professores(
+	id_professor INTEGER PRIMARY KEY AUTOINCREMENT,
+  	nome TEXT,	
+  	cpf INTEGER UNIQUE,
+  	materia TEXT
+)
+
+CREATE TABLE aulas(
+	id_professor INTEGER,
+  	id_aluno INTEGER,
+  	FOREIGN KEY (id_professor) REFERENCES professores(id_professor), /*declara a chave estrangeira sendo referenciada a primary key*/
+  	FOREIGN KEY (id_aluno) REFERENCES alunos(id_aluno)
+)
+
+ALTER TABLE aluno RENAME TO alunos /* Muda o nome da tabela*/
+
+ALTER TABLE aulas RENAME COLUMN id_aluno TO matricula_aluno/*renomeia uma coluna da tabela*/
+
+DROP TABLE aulas /*deleta a tabela*/

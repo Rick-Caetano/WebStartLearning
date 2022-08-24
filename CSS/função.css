@@ -1,0 +1,28 @@
+/*
+
+* Nome seguido de parentesis
+* recebe argumentos
+*/
+
+body {
+    height: 100vh;
+    margin: 0px;
+}
+
+h1 {
+    color: rgb(255, 0, 100); /*função*/
+    width: calc(100% - 10px); /*função*/
+}
+
+div {
+    height: calc(50% + 50px);
+    width: 500px;
+    background-image: url("https://source.unsplash.com/random");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div::after{
+    content: "Aqui vem alguma coisa";
+    color: white;
+}

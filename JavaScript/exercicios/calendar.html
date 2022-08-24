@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      *{
+        margin: 0;
+      }
+      body{
+        
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        max-width: 400px;
+      }
+
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        list-style: none;
+        width: 350px;
+      }
+
+      li {
+        flex-grow: 1;
+        margin-right: 2px;
+        margin-bottom: 2px;
+
+        background-color: blueviolet;
+        padding: 15px;
+        width: 80px;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px;
+      }
+
+      li:hover {
+        background-color: rgb(99, 0, 192);
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+
+<div>
+  <select name="mouth" id="mouth">
+    <option value="">choice you mouth</option>
+    <option value="january">january</option>
+    <option value="february">february</option>
+    <option value="march">march</option>
+    <option value="april">april</option>
+    <option value="may">may</option>
+    <option value="june">june</option>
+    <option value="july">july</option>
+    <option value="august">august</option>
+    <option value="septemper">septemper</option>
+    <option value="october">october</option>
+    <option value="november">november</option>
+    <option value="december">december</option>
+  </select>
+
+  <h1></h1>
+  <ul></ul>
+
+</div>
+
+<script>
+  const select = document.querySelector('select');
+  const list = document.querySelector('ul');
+  const h1 = document.querySelector('h1');
+  
+  //captura o evento de mudança do select e verifica a quantidade de dias nos meses
+  select.onchange = function() {
+    var choice = select.value;
+    const mouthWith30Days = choice == 'april' || choice == 'june' || choice == 'septemper' || choice == 'november'
+    let days = 31;
+    // ADD CONDITIONAL HERE
+
+    if(mouthWith30Days){
+      days = 30
+    } else if(choice == 'february'){
+      days = 28
+    }
+
+  createCalendar(days, choice); 
+  
+}
+
+//Cria os li's de acordo com os parametros passados para cada mes, montando um calendario
+  function createCalendar(days, choice) {
+    
+    list.innerHTML = '';
+    h1.textContent = choice;
+    for (var i = 1; i <= days; i++) {
+      var listItem = document.createElement('li');
+      listItem.setAttribute('value', i)
+      listItem.setAttribute('onclick', `checkeDay(${i})`)
+      listItem.textContent = i;
+      list.appendChild(listItem);
+    }
+
+    list.style.backgroundImage
+  } 
+
+  let checkeDay = (num) => {
+    const li = document.querySelector(`li:nth-child(${num})`)
+
+    if(li.style.backgroundImage == ''){
+    li.style.backgroundImage = 'url(../Midias/x-red-removebg-preview.png)'
+    } else {
+      li.style.backgroundImage = ''
+    }
+  }
+ 
+    </script>
+</body>
+</html>

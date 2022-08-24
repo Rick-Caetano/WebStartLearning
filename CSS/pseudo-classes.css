@@ -1,0 +1,85 @@
+/*
+    ## pseudo-classes 
+
+    * É um tipo de seletor que irá selecioar um elemento que estiver em um estado específico
+    * Como o primeiro elemento dentro de uma caixa ou o elemento que está com o ponteiro do mousem em cima dele
+    * começam com 2 pontos seguindo do nome da pseudo class
+
+    ## Selecionando elementos
+
+    * :first-child
+
+    * :nth-of-type()
+    * :nth-child()
+        - ambos "nth" podem receber como argumento odd(impares) e even(pares). Eles pulam item por item de acordo com o especificado
+
+    ## Ações do usuário
+
+    * hover
+    * focus
+
+    ## estado
+
+    * disbled
+    * required
+
+    ## Pseudo-elements
+
+    * 
+    
+*/
+
+ul li:first-child {
+    font-weight: bold;
+}
+
+article p:nth-of-type(2) { /*É como se estivessemos falando, pegue o segundo "p" dos que existem dentro de article e aplique...*/
+    font-weight: bold;
+    font-size: 18px;
+}
+
+article p:nth-child(4){ /*É como se estivessemos falando, pegue o quarto filho de article e aplique... Nesse caso não existe "p" na primeira posição, se colocasse-mos não aplicaria estilo ao "h3"*/
+    color: red;
+}
+
+
+ul ul li:nth-child(odd){
+    color: black;
+    background: #eee;
+}
+ul ul li:nth-child(even){
+    color:gray;
+}
+
+a:hover{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+input:focus {
+    border: yellow 2px solid;
+    outline: yellow 1px solid;
+    }
+
+input:disabled {
+    background-color: rgba(0, 0, 0, 0.329);
+    border: 2px solid gray;
+}
+
+input:required {
+    background-color: rgba(255, 0, 0, 0.404);
+    border: 2px solid yellow;
+}
+
+body > li::before{
+    content: "> "; /*É  necessario um content ainda que seja com conteudo vazio para poder fazer alguma estilização */
+
+}
+
+body > li::after{
+    content: ";";
+}
+
+body > p::first-line{
+    font-weight: bold;
+}
