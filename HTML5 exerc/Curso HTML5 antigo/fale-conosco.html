@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu tenho um menu S2</title>
+
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="interface.css">
+    <link rel="stylesheet" href="cabecalho.css">
+    <link rel="stylesheet" href="principal-rodape-lateral.css">
+    <link rel="stylesheet" href="midia.css">
+    <link rel="stylesheet" href="tabela.css">
+    <link rel="stylesheet" href="artigo.css">
+    <link rel="stylesheet" href="forms.css">
+
+    <script src="funcao.js"> </script>
+    <script>
+        function calc_total() {
+            var qtd = parseInt(document.getElementById('cqnt').value);
+            tot = qtd * 1500
+            document.getElementById('ctot').value = tot
+        }
+    </script>
+</head>
+
+<body>
+    
+    <div id="interface">
+
+    <nav class="menu">
+    <h1>Menu principaç</h1>
+    <ul>
+        <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/logo rodape 100.png')">
+            <a href="">inicio</a></li>
+        <li><a href="">especificações</a></li>
+        <li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/logo rodape 100.png')"><a href="">fotos</a></li>
+        <li onmouseover="mudaFoto('imagens/fale-conosco.png')" onmouseout="mudaFoto('imagens/logo rodape 100.png')"><a href="">fale conosco</a></li>
+    </ul>
+</nav> 
+
+    <h1>fale conosco</h1>
+
+<br>
+    <header id="cabecalho">
+        <h1>Um monte de baboseira</h1>
+        <h2>Este site contem um monte de baboseira</h2>
+    </header>
+
+    <article id="noticia-principal">
+    <hgroup>
+<h3>Fale Conosco > Contato</h3>
+<h1>Formulário de Contato</h1>
+<h2>por Gustavo Guanabara</h2>
+<h3 class="direita">Atualizado em 01/Maio/2013</h3>
+</hgroup>
+
+ <form action="mailto:rickbobcs9@gmail.com" method="post" oninput="calc_total()">
+
+<fieldset id="usuario"> <legend>Identificação do Usuário</legend>
+       <p> <label for="cname">Nome:</label>  <input type="text" name="tname" id="cname" size="20" maxlength="30" placeholder="nome completo"></p>
+    <p>Senha: <input type="password" name="tsenha" id="csenha"></p>
+    <p>E-mail: <input type="email" name="temail" id="cemail"></p>
+   <fieldset> 
+       <legend>Sexo:</legend> 
+        <input type="radio" name="tsexo" id="cmasc"> <label for="cmasc"> Masculino</label>
+        <input type="radio" name="tsexo" id="cfem" checked> <label for="cfem"> Feminino</label>
+    </fieldset>
+   <p> Data de Nascimento: <input type="date" name="tdate" id="cdate"> </p>
+</fieldset>
+
+<fieldset id="endereco">
+<legend>Endereço do Usuário</legend>
+    Logradouro:
+    Número: <input type="number" name="tnumber" id="cnumber">
+
+    Estado: <select name="test" id="cest">
+       <optgroup label="regiao-sudeste"> <option value="RJ">Rio de janeiro</option>
+        <option value="SP">São Paulo</option>
+        <option value="MG" selected>Minas gerais</option>
+        </optgroup>
+       <optgroup label="Sul">
+           <option value="SC">Santa catarina</option>
+           <option value="RS">Rio grande do sul</option>
+       </optgroup>
+    </select>
+
+    Cidade: <input type="text" name="tcidade" id="ccidade" placeholder="sua cidade" list="cidades">
+    <datalist id="cidades">
+        <option value="Rio de janeiro"></option>
+        <option value="Nova iguaçu"></option>
+        <option value="Lagoa Santa"></option>
+    </datalist>
+
+</fieldset>
+
+<fieldset id="mensagem"> 
+<legend> Mensagem do Usuário</legend>
+    Grau de Urgência: min<input type="range" name="turg" id="curg" min="0" max="10" step="2">max
+    Mensagem:
+</fieldset>
+
+<fieldset>
+<legend id="pedido"> Quero um Google Glass</legend>
+   <input type="checkbox" name="tped" id="cped"> Gostaria de adquirir um Google Glass quando disponível
+    Cor: <input type="color" name="" id="">
+    Quantidade: <input type="number" name="tqnt" id="cqnt" min="0" max="5">
+    Preço Total: R$ <input type="text" name=ttot" id="ctot" readonly>
+
+    <input type="submit" value="enviar">
+</fieldset>
+</form>
+
+</article>
+
+    <footer id="rodape">
+        <p>Copyright &copy; 2071 - by rick futurista <br>
+        <a href="" target="_blank">facebook</a> | <a href="" target="_blank">instagram</a> </p>
+    </footer>
+</div>
+</body>
+</html>

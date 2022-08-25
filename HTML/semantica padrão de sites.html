@@ -1,0 +1,148 @@
+<!--
+
+    
+    * Header
+
+        - Quando colacado no inicio da pagina é visto como global
+        - Pode ser usado em outros elementos semânticos como article, section
+        - Header dentro de outro header ou footer não deve ser usado
+        - Podem ter multiplos headers na pagina
+        - Não possui atributos específicos
+
+    * Nav
+
+        - Aponta para outras areas ou seções da nossa página
+        - representa mais acessibilidade
+        - pode ser usado em section por exemplo
+        - O menu do site é feito a partir do nav assim como menus laterais
+        - Não possui atributos especificos só globais
+
+    * Main
+
+        - Usado apenas uma vez e logo apos o body
+        - Tem a ver com o conteudo central, então não se colaca menus, blocos de publicidade ou nada que não seja o conteudo principal
+        -  Não possui atributos especificos só globais
+
+    * Article
+
+        - São conteudos independentes mas relacionados um com o outro, podem representar post também.
+        - não possuem atributos específicos, somente os globais
+
+    * Aside
+
+    Fica na parte lateral e serve para fazer a barra lateral, mas também:
+
+        - Carrega conteudos levemente relacionados com o principal
+            . explicações
+            . glossários
+            . links extras
+            . biografia do autor
+            . informações de perfil
+
+        - Atributos apenas globais
+
+    * Section
+
+        - Pode ter varias sections
+        - Se houver articles, as sections estarão dentro deles
+        - se houver apenas o main por exemplo, é ideal que tenha apenas uma section por exemplo
+
+    * Footer
+
+        - Geralmente no final da página
+            - informações do autor, copyright, contato, sitemap, voltar ao topo
+        - atributos: globais
+
+    
+Elementos não semanticos, para uso genéricos
+
+    * Div
+        Usado se não conseguir achar um elemento de bloco semântico
+
+    * Span
+        Usado se não conseguir achar um elemento de texto semântico
+
+    em ambas, use atributos globais como id e class para entregar maior significado.
+-->
+
+<body>
+    <!--headers-->
+    <header><!--aqui um nav--></header>
+
+    <section>
+        <header><!--Aqui titulos ou uma descrição da seção--></header>
+    </section>
+
+    <!--Nav-->
+    <header>
+        <nav>
+            <ul>
+                <li>outra pagina</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <header>
+            <nav>
+                <ul>
+                    <li>item para navegar</li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <!--Main, article e section-->
+    <main>
+        <h1>receitas</h1>
+        <p>uma pagina para deliciosas receitas</p>
+
+    </main>
+
+    <article>
+        <h2>Receita de torta de maça</h2>
+        <p>Essa é uma receita de torta de maça</p>
+
+        <section>
+            <h3>modo de preparo</h3>
+            <p>o preparo é feito com...</p>
+        </section>
+    </article>
+
+    <article>
+        <h2>torta de limão</h2>
+        <p>receita de uma torta de limão</p>
+
+        <section>
+            <h3>modo de preparo</h3>
+            <p>o preparo é feito com...</p>
+        </section>
+    </article>
+
+    <!--Outro caso para section-->
+    <main>
+        <h1>receita 1</h1>
+        <p>descrição da receita</p>
+
+        <section>
+            <h2>modo de preparo</h2>
+            <p>o preparo é feito...</p>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <p>&copyright</p>
+    </footer>
+
+    <!--Elementos genericos-->
+
+    <!--Seria interessante destaccar no css ao ives de usar o strong...-->
+    <h1>titulo <span id="destaque">destacado</span></h1>
+
+    <!--Não seria ideal usar uma section por exemplo, pois ela não é para uso tão globais, da pagina inteira-->
+    <div class="cart">
+        <h2>carrinho de compras</h2>
+    </div>
+
+</body>

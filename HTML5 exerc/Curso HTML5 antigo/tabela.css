@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+table.tabelaespec{
+    border: 1px solid grey;
+    /*Tira aquele vão entre as bordas */
+    border-spacing: 0px;
+    /*Os dois como AUTO ajuda a centralizar a tabela*/
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+table.tabelaespec td{
+    border: 1px solid grey;
+    padding: 10px;
+    text-align: center;
+    /* Alinha as letras para cima ou para baixo dentro da celula, como no excel
+     * Aceita bottom, top e middle(meio? eu acho...) 
+     */
+    vertical-align: top;
+}
+    /*O class diferente do id pode ser usado nesses casos onde dentro de uma tag com
+    Varios elementos (como table) precisamos modificar certos elementos em grupos */
+table.tabelaespec td.colDir{
+    color: aliceblue;
+    background-color: grey;
+}
+table.tabelaespec td.colEsq{
+    background-color: #cecece;
+    /*Perceba que não há conflito com o vertical-align anterior, pois esse sobrepõe o outro 
+    para a classe*/
+    vertical-align: top;
+}
+table.tabelaespec caption{
+    color: grey;
+    font-size: 15pt;
+    font-weight: bolder;
+}
+table.tabelaespec caption span{
+    display: block;
+    float: right;
+    color: blueviolet;
+    font-size: 8pt;
+    margin: 2px; /* 10px Posiciona mais para baixo, diminuindo a flutuação */
+}

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+
+header#cabecalho{
+    height: 150px;
+    border-bottom: 1px black dotted;
+    /*no-repeat para não repetir imagem 
+    * após no-repeat temos o deslocamento lateral e o deslocamento vertical
+    */
+
+    background: url(.//imagens/logo\ rodape\ 100.png) no-repeat 350px 0px;
+}
+
+header#cabecalho h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: grey;
+    text-shadow: 1px 1px 1px black;
+     /*Margem de baixo */
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+    font-family: 'Goblin One', cursive;;
+    font-size: 15px;
+    padding: 0px;
+    /*Temos o margin bottom, top, right e left */
+    margin-top: 0px;
+    
+}

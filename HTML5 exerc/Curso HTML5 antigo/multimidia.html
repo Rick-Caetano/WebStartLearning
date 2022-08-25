@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu tenho um menu S2</title>
+
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="interface.css">
+    <link rel="stylesheet" href="cabecalho.css">
+    <link rel="stylesheet" href="principal-rodape-lateral.css">
+    <link rel="stylesheet" href="midia.css">
+    <link rel="stylesheet" href="tabela.css">
+    <link rel="stylesheet" href="artigo.css">
+    <link rel="stylesheet" href="fotos.css">
+
+    <script src="funcao.js">
+    </script>
+    <script>
+        document.getElementById("musica").play();
+    </script>
+</head>
+
+<body>
+    
+    <div id="interface">
+    <header id="cabecalho">
+        <h1>Um monte de baboseira</h1>
+        <h2>Este site contem um monte de baboseira</h2>
+    </header>
+
+    <nav class="menu">
+    <h1>Menu principaç</h1>
+    <ul>
+        <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/logo rodape 100.png')">
+            <a href="">inicio</a></li>
+        <li><a href="">especificações</a></li>
+        <li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/logo rodape 100.png')"><a href="">fotos</a></li>
+        <li onmouseover="mudaFoto('imagens/fale-conosco.png')" onmouseout="mudaFoto('imagens/logo rodape 100.png')"><a href="">fale conosco</a></li>
+    </ul>
+</nav> 
+
+<section id="corpo-full">
+    <article id="noticia-principal"></article>
+    <hgroup>
+<h3>Glass > Multimídia</h3>
+<h1>Sons e Vídeos</h1>
+<h2>por Gustavo Guanabara</h2>
+<h3 class="direita">Atualizado em 01/Maio/2013</h3>
+</hgroup>
+
+Áudio e Vídeo
+<div id="tv-radio">
+    
+    <audio id="musica" controls autoplay="true" loop >
+        <source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg3">
+        <source src="_media/2009-lovers-carvings-bibio.oggvorbis.ogg" type="audio/ogg">
+        <p>seu navegador não suporta audio</p>
+    </audio>
+    <video controls autoplay="true" muted loop id="filme">
+        <source src="_media/getting-started.mp4" type="video/mpeg4" poster="_imagens/mini02.jpg">
+        <source src="_media/getting-started.webmsd.webm" type="video/webm">
+        <p>seu navegador não suporta audio</p>
+    </video>
+</div>
+</section>
+<br>
+    
+
+    <footer id="rodape">
+        <p>Copyright &copy; 2071 - by rick futurista <br>
+        <a href="" target="_blank">facebook</a> | <a href="" target="_blank">instagram</a> </p>
+    </footer>
+
+
+</div>
+</body>
+</html>

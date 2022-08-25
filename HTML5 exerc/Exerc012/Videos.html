@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hospedando videos localmente</h1>
+    <p>
+        esse video está hospedado no meu servidor
+    </p>
+
+    <!-- poster diz respeito as thumbs-->
+    <video width="500" poster="midia/music 650.jpg" controls loop autoplay>
+        <source src="midia/frutinha.mp4" type="video/mpeg4">
+        <source src="midia/frutinha 720.webm" type="video/webm">
+        <p>Seu navegador não suporta video</p>
+    </video> <br>
+
+    <!--Esta tecnica de inserir videos pode-se custosa para um serviço de hospedagem.
+    Podemos pensar que se o video tem 20MB e seu site é acessado por 1000 pessoas por dia
+    você tem um consumo de banda de 20 GB por dia, isso consume muita banda e torna o serviço
+    mais caro para o seu cliente... A não ser que ele, concorde use hospedagem externa-->
+
+    <!--Usa a API do youtube, consumindo menos banda e usando um video hospedado lá-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y?start=371" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+
+    <!--Usando o vimeo para incorporar um video-->
+    <iframe src="https://player.vimeo.com/video/124313553" width="640" height="272" 
+    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://vimeo.com/124313553">Celles et Ceux des Cimes et Cieux</a> from 
+    <a href="https://vimeo.com/gwenngermain">Gwenn GERMAIN</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+</body>
+</html>

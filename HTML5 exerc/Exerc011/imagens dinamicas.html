@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Midia em html5</h1>
+    <p>tente abrir esse site em varios dispositivos diferentes ou diminua e aumente a imagem do
+        seu navegador </p>
+        <!-- A base é a imagem padrão que a gente quer carregar, no caso G. Deve seguir uma ordem
+        onde a grade é a ultima e a pequena é a primeira-->
+    <picture>
+        <!-- coloque uma folga de 50px para dar espaço para a barra de rolagem-->
+        <source media="(max-width: 750px)" srcset="imagens/P.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/M.png" type="image/png">
+        <img src="imagens/G.png" alt="imagem grande">
+    </picture>
+    <h2>reprodução de audio</h2>
+
+    <audio src="midia/Before I Go - RKVC.mp3" autoplay controls></audio>
+
+    <p>ou</p>
+    <!--temos os três para caso não consiga carregar algum, deve sempre seguir a ordem
+    o primeiro e sempre aquele que tem preferência-->
+
+    <audio preload="metadata" autoplay loop controls>
+        <!--metadata carrega apenas o essencial, mais recomendado que auto ou nada-->
+        <source src="midia/Before I Go - RKVC.mp3" type="audio/mpeg">
+        <source src="midia/Before I Go - RKVC.ogg" type="audio/ogg">
+        <source src="midia/Before I Go - RKVC.wev" type="audio/wev"> <!-- evite esse formato-->
+        <p> Seu navegador não suporta audio...
+            <a href="midia/Before I Go - RKVC.mp3">baixe o arquivo por esse link</a>
+        </p>
+
+    </audio>
+
+</body>
+</html>
