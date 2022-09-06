@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .msgBox{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 245px;
+            height: 200px;
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+    <title>my menssage box</title>
+</head>
+<body>
+    
+    <script>
+        function displayMessage(message, type){
+            let boxViewer = document.createElement('div')
+            document.body.appendChild(boxViewer)
+            boxViewer.setAttribute('class', 'msgBox')
+
+            let icon = document.createElement('img')
+            //https://icons8.com.br/icons/set/new
+            if (type == 'error'){
+                icon.setAttribute('src','https://img.icons8.com/dusk/64/000000/error.png')
+            } else if (type == 'info') {
+                icon.setAttribute('src','https://img.icons8.com/plasticine/100/000000/information.png')
+            } else if (type == 'new'){
+                icon.setAttribute('src','https://img.icons8.com/doodle/48/000000/new--v1.png')
+            }
+            boxViewer.appendChild(icon)
+            
+
+            let msg = document.createElement('p')
+            msg.textContent = message
+            boxViewer.appendChild(msg)
+
+            let bnt = document.createElement('button')
+            bnt.textContent = 'x'
+            boxViewer.appendChild(bnt)
+
+            bnt.onclick = function() {
+                boxViewer.parentNode.removeChild(boxViewer)
+            }
+        }
+
+        displayMessage('error, this page not have content now...', 'error')
+    </script>
+</body>
+</html>
